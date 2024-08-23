@@ -1,0 +1,428 @@
+
+html { 
+    scroll-behavior: smooth;
+}
+* {
+    font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+body{
+    min-width:375px;
+    padding-bottom: 30px;
+}
+.flex{
+    display: flex;
+}
+.workDiv{
+    width: 100%;
+    
+}
+.workDiv header{
+    background-color: white!important;
+}
+header{
+    padding: 0 20px;
+    display: none;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.bacWhite{
+    background-color: white;
+}
+.flex{
+    display: flex;
+}
+header h1{
+    width: 60%;
+    font-weight: bolder;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+.index_main{
+    display: flex;
+    background-image: url(/bacImg.jpg);
+    background-size: cover;
+    height: 550px;
+}
+.index_main div{
+    /* height: 300px; */
+    font-size: 40px;
+    align-items: center;
+}
+
+.index_main div:not(.title ,.nav_link > div){
+    height: 100vh;
+}
+.title{
+    width: 40%;
+    height: 20%;
+    padding-top: 100px;
+    padding-left: 50px;
+    font-weight: bold;   
+}
+.title h2:nth-child(2){
+    margin-top: 10px;
+    text-align: end;
+}
+.nav_link{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.nav_link nav{
+    width: 130px;
+    font-weight: bold;
+    position: absolute;
+    right: 15%;
+}
+.nav_link li + li{
+    margin-top: 30px;
+}
+.nav_link > div{
+    height: 60%;
+    clip-path:polygon(99.5% 0, 100% 0, 0.5% 100%, 0 100%);
+    background-color: black;
+    width: 300px;
+    position: relative;
+}
+.profile{
+    padding: 10px;
+}
+.nav_link nav{
+    height: 250px;
+    position: absolute;
+    top: 140px;
+}
+
+.navlink > nav > ul{
+    position: absolute;
+    top:20px;
+}
+.profile{
+    margin-top: 20px;
+}
+
+.profile .flex div{
+    width: 50%;
+}
+.profile h2{
+    font-weight: bolder;
+    font-size: 40px;
+    padding-left: 100px;
+    margin-bottom: 30px; 
+
+}
+.profile dt{
+    font-weight: bolder;
+    font-size: 24px;
+    margin: 12px 0;
+}
+.profile dd{
+    padding-left: 30px;
+    font-size: 20px;
+}
+.profile dd + dd{
+    margin: 5px 0;
+}
+.profile .left_img{
+    position: relative;
+}
+.profile img{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 2px solid black;
+    position: sticky;
+    margin: 0 auto;
+    top: 30px;
+    right: 0px;
+}
+.work h2{
+    font-size: 40px;
+    font-weight: bolder; 
+    padding-left: 100px; 
+    margin-bottom: 30px;
+}
+
+.work_view{
+    padding-left: 5%;
+    width: 80%;
+}
+.work_view h1{
+    font-size: 36px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.work_view h2{
+    font-size: 28px;
+    font-weight: bolder;
+}
+.work_view p{
+    font-size: 20px;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+.work_view img{
+    width: 100%;
+}
+
+.work .flex{
+    justify-content: space-around;
+}
+
+
+.work .flex a{
+    width: 35%;
+    display: block;
+}
+.work h3{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.work img{
+    display: block;
+    width: calc(100% - 30px);
+    height: 25vw;
+    border: 1px black solid;
+}
+
+@media screen and (max-width:600px){
+
+    header{
+        font-size: 20px;
+        height: 30px;
+    }
+    header h1{
+        font-weight: bold;
+    }
+    .index_main{
+        display: block;
+    }
+    .index_main div{
+        width: 100%;
+        font-size: 24px;
+        height: 200px;
+    }
+    .title h2{
+        font-size: 28px;
+    }
+    .title h2:nth-child(2){
+        margin-top: 10px;
+        text-align: center;
+    }
+    .nav_link{
+        display: none;
+    }
+    .nav_link nav{
+        padding-top: 20px;
+        right: 12%;
+    }
+    .nav_link li + li{
+        margin-top: 15px;
+    }
+    .nav_link > div{
+        clip-path:polygon(99.5% 0, 100% 0, 0.5% 100%, 0 100%);
+        background-color: black;
+        width: 150px;
+    }
+    .profile .flex div {
+        width: 100%;
+    }
+    .profile h2{
+        font-weight: bold;
+        font-size: 32px;
+        padding-left: 20px; 
+    }
+    .profile .flex ,.left_img{
+        display: contents;
+    }
+    .profile img{
+        width: 150px;
+        height: 150px;
+        border: 2px solid black;
+        position: relative;
+        top: 0;
+        left: 10%;
+        margin: 0;
+    }
+    .introduction{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .profile dl{
+        margin-left: 5%;
+        width: 100%;
+    }
+    .profile dt{
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .profile dd{
+        font-size: 18px;
+    }
+    .work .flex{
+        display: contents;
+    }
+    .work h2{
+        font-weight: bold;
+        font-size: 32px;
+        padding-left: 20px; 
+    }
+    .work h3{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    .work img{
+        width: 70%;
+        margin: 0 auto;
+        height: 150px;
+    }
+    .work .flex a{
+        width: 90%;
+    }
+    .work a + a{
+        margin-top: 20px;
+    }
+    .work_view h1{
+        font-size: 28px;
+    }
+    .work_view h2{
+        font-size: 20px;
+    }
+    .work_view p{
+        font-size: 16px;
+    }
+    .work_view img{
+        height: 200px;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:959px){
+    .index_main div{
+        font-size: 24px;
+        /* height: 200px; */
+    }
+    .nav_link nav{
+        padding-top: 20px;
+        right: 12%;
+    }
+    .nav_link li + li{
+        margin-top: 15px;
+    }
+    .nav_link > div{
+        clip-path:polygon(99.5% 0, 100% 0, 0.5% 100%, 0 100%);
+        background-color: black;
+        width: 150px;
+    }
+    .profile h2{
+        font-weight: bold;
+        font-size: 32px;
+        padding-left: 20px; 
+    }
+    .profile img{
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin-top: 20px;
+        top: 50px;
+        right: 0px;
+    }
+    .profile dt{
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .profile dd{
+        font-size: 18px;
+    }
+    .work h2{
+        font-weight: bold;
+        font-size: 32px;
+        padding-left: 20px; 
+    }
+    .work h3{
+        font-size: 20px;
+    }
+    .work .flex a{
+        width: 45%;
+    }
+    .work_view h1{
+        font-size: 32px;
+    }
+    .work_view h2{
+        font-size: 24px;
+    }
+    .title{
+    padding-top: 150px;
+    }
+}
+.navUp{
+
+overflow: hidden;    
+animation-name: navUp;
+animation-fill-mode:forwards;
+animation-duration:2s;
+animation-iteration-count:1;
+animation-timing-function:linear;
+animation-direction:normal;
+position: fixed!important;;
+top:0px!important;
+
+}
+.headerOpen{
+    display: flex;
+    overflow: hidden;    
+    animation-name: headerOpen;
+    animation-fill-mode:forwards;
+    animation-duration:2s;
+    animation-iteration-count:1;
+    animation-timing-function:linear;
+    animation-direction:normal;
+    margin: 0 auto;
+}
+
+
+@keyframes navUp{
+    0% {
+      opacity: 100%;
+      top:0px;
+    }
+    25%{
+        height: 0;
+        top:-30px;
+    }
+    100%{
+        height: 0px;
+        top:-50px;
+        opacity: 0%;
+    }
+    
+  }
+@keyframes headerOpen{
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50%{
+        width: 0;
+        opacity: 0;
+        left: 50%;
+    }
+    100%{
+       width: 100%;
+       opacity: 100%;
+       left: 0%;
+    }
+    
+  }
