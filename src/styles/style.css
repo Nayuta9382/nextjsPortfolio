@@ -10,7 +10,7 @@ html {
 }
 body{
     min-width:375px;
-    padding-bottom: 30px;
+    
 }
 .flex{
     display: flex;
@@ -24,6 +24,7 @@ body{
 }
 header{
     padding: 0 20px;
+    padding-top: 10px;
     display: none;
     justify-content: space-between;
     height: 50px;
@@ -198,8 +199,31 @@ header nav ul{
     border: 1px black solid;
 }
 
-@media screen and (max-width:600px){
+.navUp{
 
+    overflow: hidden;    
+    animation-name: navUp;
+    animation-fill-mode:forwards;
+    animation-duration:2s;
+    animation-iteration-count:1;
+    animation-timing-function:linear;
+    animation-direction:normal;
+    position: absolute!important;;
+    
+    }
+    .headerOpen{
+        display: flex;
+        overflow: hidden;    
+        animation-name: headerOpen;
+        animation-fill-mode:forwards;
+        animation-duration:1.5s;
+        animation-iteration-count:1;
+        animation-timing-function:linear;
+        animation-direction:normal;
+        margin: 0 auto;
+    }
+
+@media screen and (max-width:600px){
     header{
         font-size: 20px;
         height: 30px;
@@ -367,44 +391,19 @@ header nav ul{
     padding-top: 150px;
     }
 }
-.navUp{
 
-overflow: hidden;    
-animation-name: navUp;
-animation-fill-mode:forwards;
-animation-duration:2s;
-animation-iteration-count:1;
-animation-timing-function:linear;
-animation-direction:normal;
-position: fixed!important;;
-top:0px!important;
-
-}
-.headerOpen{
-    display: flex;
-    overflow: hidden;    
-    animation-name: headerOpen;
-    animation-fill-mode:forwards;
-    animation-duration:2s;
-    animation-iteration-count:1;
-    animation-timing-function:linear;
-    animation-direction:normal;
-    margin: 0 auto;
-}
 
 
 @keyframes navUp{
     0% {
       opacity: 100%;
-      top:0px;
+      top:140px;
     }
-    25%{
-        height: 0;
-        top:-30px;
+    75%{
+        top:0px;
     }
     100%{
         height: 0px;
-        top:-50px;
         opacity: 0%;
     }
     
@@ -426,3 +425,56 @@ top:0px!important;
     }
     
   }
+nav a{
+    position: relative;
+}
+
+nav a:hover{
+    opacity: 70%;
+}
+nav a:hover::after{
+    content: '';
+    width: 140%;
+    height: 2px;
+    display: inline-block;
+    background-color: black;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    opacity: 70%;
+
+    animation-name: aLink;
+    animation-fill-mode:forwards;
+    animation-duration:0.3s;
+    animation-iteration-count:1;
+    animation-timing-function:linear;
+    animation-direction:normal;
+}
+  @keyframes aLink{
+    0% {
+        width: 0;
+    }
+    100%{
+       width: 130%;
+      
+    }
+}
+.img{
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+footer{
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    background-color: rgba(235, 234, 234, 0.785);
+    display: flex;
+    align-items: center;
+}
+footer small{
+    display: block;
+    text-align: center;
+    width: 100%;
+}

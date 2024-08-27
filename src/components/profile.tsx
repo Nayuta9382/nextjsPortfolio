@@ -3,7 +3,7 @@ import Image from "next/image";
 const Profile = () => {
     return (
         <div className="profile" id="profile">
-            <h2>profile</h2>
+            <h2>Profile</h2>
             <div className="flex">
                 <div className="left_img">
                     <Image src="/profile_img.png" alt="" width={500} height={500}></Image>

@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { workData } from "@/components/types";
 import { queryError } from "@sitecore-jss/sitecore-jss/types/i18n/graphql-dictionary-service";
@@ -27,7 +28,7 @@ const Work = () => {
             <Header headerClass={headerClass} setHeaderClass={setHeaderClass}></Header>
             <div className="work_view">
                 <h1>{workData?.title}</h1>
-                <Image src={`/${workData?.imgUrl}`} alt="" width={1000} height={1000} />
+                <Image src={`/${workData?.imgUrl}`} alt="" width={1000} height={1000} className="img"/>
                 <h2>作品紹介</h2>
                 <p>{workData?.explanation}</p>
                 <h2>作成時期</h2>
@@ -37,6 +38,7 @@ const Work = () => {
                 <h2>開発ツール</h2>
                 <p>{workData?.tool}</p>
             </div>
+            <Footer />
         </div>
     );
 }

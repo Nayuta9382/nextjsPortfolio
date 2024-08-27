@@ -6,9 +6,8 @@ import Profile from "@/components/profile";
 import WorkView from "@/components/work_view";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { workData } from "@/components/types";
-import { log } from "console";
-import { headers } from "next/headers";
+import Footer from "@/components/footer";
+
 
 
 
@@ -50,6 +49,7 @@ const scrollTop = (): number => {
       <TopView navClass={navClass} setNavClass={setNavClass}/>
       <Profile/>
       <WorkView/>
+      <Footer />
     </>
   );
 }

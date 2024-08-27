@@ -34,7 +34,7 @@ const Header: React.FC<Props> = ({headerClass,setHeaderClass}) => {
 
     return (
         <header className={headerClass + " " + bacWhite}>
-            <h1>myPortfolio</h1>
+            <h1>MyPortfolio</h1>
             <nav><ul>
                     <li><Link href="/">Top</Link></li>
                     <li><Link href="/#profile">Profile</Link></li>

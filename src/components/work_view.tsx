@@ -15,21 +15,21 @@ useEffect(()=>{
     imgUrl : "money.png",
     period : "2024年 2月",
     tool : "IntelliJ IDEA",
-    explanation : "家計簿アプリはjavaServletで開発されたWebアプリケーションである。ああああああああああああああああああああああああああああああああああああああああああああ"},
+    explanation : "家計簿アプリはjavaServletで開発されたWebアプリケーションである。"},
   {
     title : "新規登録サイト",
     language : "PHP",
     imgUrl : "php.png",
     period : "2024年 7月",
     tool : "Visual Studio Code",
-    explanation : "説明"},
+    explanation : "新規登録サイトはphpを使用して架空の登録サイトを沿うてして開発されたwebページである"},
 ];
 setWorkData(data);
 },[]);
 
     return (
         <div className="work" id="work">
-            <h2>work</h2>
+            <h2>Work</h2>
             <div className="flex">
 
             <Link  href={{ pathname: `/work/1`, query: workDatas[0]}} >
