@@ -31,16 +31,20 @@ setWorkData(data);
         <div className="work" id="work">
             <h2>Work</h2>
             <div className="flex">
-
+                {workDatas.length > 0 && (
+            <>
             <Link  href={{ pathname: `/work/1`, query: workDatas[0]}} >
                 {workDatas[0] && workDatas[0].title ? <h3>{workDatas[0].title}</h3> : ""}
-                {/* <Image src={`/${workDatas[0] && workDatas[0].imgUrl ? workDatas[0].imgUrl : ""}`} alt="" width={500} height={500} quality={100}/> */}
                 <Image src={`/${workDatas[0].imgUrl}`} alt="" width={500} height={500} quality={100}/>
             </Link>
             <Link  href={{ pathname: `/work/2`, query: workDatas[1]}} >
                 {workDatas[1] && workDatas[1].title ? <h3>{workDatas[1].title}</h3> : ""}
                 <Image src={`/${workDatas[1] && workDatas[1].imgUrl ? workDatas[1].imgUrl : ""}`} alt="" width={500} height={500} />
             </Link>
+        </>
+
+                )}
+
             </div>
         </div>
     );
